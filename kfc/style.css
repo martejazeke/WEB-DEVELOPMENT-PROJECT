@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css?family=Robot+Slab:300,400,200");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(https://static.wixstatic.com/media/459af9_fa711344707446c4ba70d4048bbeb0b7~mv2.png);
+    background-size: cover;
+    font-family: 'Roboto Slab', serif;
+    min-width: 100vh;
+}
+
+/* NAVbar */
+
+header{
+    width:auto;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    z-index: 1500;
+    box-shadow: 2px 2px 10px rgba(0,0,0,1);
+}
+
+header ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    top:0;
+    overflow:hidden;
+    flex:1;
+    text-align: right;
+    font-size: 20px;;
+    background-color: white;
+}
+
+header li{
+    display: inline-block;
+    width: auto;
+    margin:10px 20px;
+    top:0;
+}
+
+header ul li a{
+    text-decoration: none;
+    display: block;
+    color: var(--secondary-color);
+    background-color: white;
+    transition: .4s;
+}
+header ul li a:hover{
+    color:red;
+    font-weight: bolder;
+    transform: translateY(-5px);
+}
+
+
+#logo{
+    display:grid;
+    place-items: center;
+    width: 80px;
+    cursor: pointer;
+    background-color: white;
+}
+
+
+
+/* CENTER */
+.main{
+    display: flex;
+    padding: 100px;
+    text-align: center;
+   
+}
+
+.main img{
+    width:550px;
+    cursor: pointer;
+    animation: fade-up 0.5s;
+}
+
+.header{
+    margin: 0;
+    font-size: 60px;
+    animation: fade-up 0.5s;
+}
+
+.desc{
+    margin:0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 200;
+    animation: fade-up 0.5s;
+}
+
+.red{
+    color:red
+}
+
+.text-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#food{
+    display: flex;
+    flex-direction: column;
+    left:10px;
+}
+
+/* BUTTON*/
+
+.btn{
+    color:white;
+    border: 1px solid var(--monza);
+    background-color: var(--monza);
+    padding:1rem 2rem;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+    animation:fade-up 0.5s;
+    font-family: 'Roboto Slab', serif;
+    box-shadow: 5px 5px 5px black;
+    transition: .4s;
+}
+
+.btn-primary{
+    font-weight: 700;
+}
+
+.btn-primary:hover{
+    transform: scale(1.15) translateX(-12px);
+    color: var(--monza);
+    background-color: white;
+    border: 2px var(--monza);
+
+}
+
+
+/* ANIMATION */
+
+@keyframes fade-up{
+    0%{
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+
+:root{
+    --monza: rgba(193,0,32,1)
+}

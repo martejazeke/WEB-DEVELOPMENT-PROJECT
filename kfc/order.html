@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC UAE</title>
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="order.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="navbar">
+        <header class="header">
+            <a href="kfcHome.html"><img src="https://th.bing.com/th/id/R.a2c026226f25e15add2c921d7349b224?rik=qZNIvjrvTi1XrA&riu=http%3a%2f%2fwww.stickpng.com%2fassets%2fimages%2f58429977a6515b1e0ad75ade.png&ehk=X2VKCpRD1MSWJgfSo1LxqYpVP5%2b%2b9zpjTaqYn%2fS6kJw%3d&risl=&pid=ImgRaw&r=0" id="logo" title="KFC UAE"></a></img>
+            <ul>
+                <li><a href="/codes/html/kfc/kfcHome.html" title="Home">HOME</a></li>
+                <li><a href="/codes/html/kfc/kfcAbout.html" title="About Us">ABOUT US</a></li>
+                <li><a href="/codes/html/kfc/kfcMenu.html" title="Menu">MENU</a></li>
+                <li><a href="/codes/html/kfc/kfcLocation.html" title="Locations">LOCATIONS</a></li>
+            </ul>
+        </header>
+    </div>
+
+<div class="container">
+
+
+    <form action="">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">Billing Address</h3>
+
+                <div class="inputBox">
+                    <span>Full Name :</span>
+                    <input type="text" placeholder="Name">
+                </div>
+                <div class="inputBox">
+                    <span>E-mail :</span>
+                    <input type="email" placeholder="example@example.com">
+                </div>
+                <div class="inputBox">
+                    <span>Address :</span>
+                    <input type="text" placeholder="Room No. - Floor No. - Building - Street">
+                </div>
+                <div class="inputBox">
+                    <span>City :</span>
+                    <input type="text" placeholder="Abu Dhabi">
+                </div>
+
+                <div class="flex">
+
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">Payment</h3>
+
+                <div class="inputBox">
+                    <span>Cards Accepted :</span>
+                    <img src="https://static.wixstatic.com/media/459af9_e67560c2b3134c7eb6cbd5af5c49ad17~mv2.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>Name on card :</span>
+                    <input type="text" placeholder="Mr/Mrs. Name">
+                </div>
+                <div class="inputBox">
+                    <span>Credit Card No. :</span>
+                    <input type="number" placeholder="1111-2222-3333-4444">
+                </div>
+                <div class="inputBox">
+                    <span>Expiry Month :</span>
+                    <input type="text" placeholder="January">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Expiry Year :</span>
+                        <input type="number" placeholder="2022" maxlength="4" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="number" placeholder="1234" minlength="4" maxlength="4">
+                    </div>
+                </div>
+
+            </div>
+    
+        </div>
+
+        <button class="submit-btn" onclick="location.href='kfcMenu.html'">Proceed to Checkout</button>
+    </form>
+    
+</div>    
+
+<script>
+
+    document.querySelectorAll('input[type="number"]').forEach(input =>{
+        input.oninput = () =>{
+            if(input.value.length > input.maxLength) input.value = input.value.slice(0,input.maxLength
+            );
+        };
+    });
+
+</script>
+    
+</body>
+</html>
